@@ -9,18 +9,20 @@ html{
     --line-color:#2f3336;
     --card-color:#000000;
     --shadow-color:#ffad1f20;
+    --darktextcolor:#6e767d;
 }
+
 body{
     height: 100vh;
     display: grid;
     grid-template: 
     "left main right" 1fr/
-    minmax(100px,400px) auto minmax(100px,450px);
+    minmax(100px,350px) auto minmax(100px,450px);
     color: #d9d9d9;       
 }
 @media screen and (max-width:900px){
     
-   body {  
+   body{  
     grid-template: 
     "left main" 1fr/
     100px 1fr;}
@@ -34,39 +36,64 @@ body{
        
     }
 }
-.uh{
-    border: 1px solid var(--line-color);
-    margin-top: 20px;
-    background-color: var(--card-color);
-}
+
 aside{
     border: 1px solid var(--line-color);
+    
 }
-.left{grid-area:left;
+.left{
+    grid-area:left;
     background-color:var(--card-color);
     display: grid;
     padding-top: 25px;
-    position: relative;
     grid-template-rows: 70% 30%;
+    padding-left: 100px;
+    position: relative;
 }
 .left nav{
 display: grid;
 grid-template-rows: auto;
-justify-content: right;
+justify-content: center;
 padding-right: 35px;
+
 }
-.left nav svg{
-transition: 0.2s;
+.left nav a{
+    text-decoration: none;
+    color: inherit;
+    font-size: 20px;
+    transition: 0.2s;
+    display: grid;
+    grid-template-columns: 40px auto;
+    gap: 10px;
+    align-items: center;
+    height: 50px; 
+    font-weight: bolder;
+    padding-left: 10px;
+}
+.left nav .home{
+   color:#ffad1f;  
+}
+.left button{
+    background-color: #ffad1f;
+    padding: 10px 85px 10px 85px;
+    font-size: 16px;
+    color: #ffffff;
+    border-radius: 30px;
+    border:none;
+    margin-top: 15px;
+}
+.left button:hover{
+    opacity: 90%;
 }
 
 .left nav .bird:hover{
     border-radius: 50%;
     box-shadow: 0px 0px 1px 10px #a9a9a920;
 }
-.left nav svg:hover{
-    border-radius: 50%;
-    box-shadow: 0px 0px 1px 10px var(--shadow-color) ;
+.left nav a:hover{
+    border-radius: 30px;
     background-color:var(--shadow-color);
+    color:#ffad1f;
 }
 .left nav .feather{
     border-radius: 50%;
@@ -82,18 +109,27 @@ transition: 0.2s;
     box-shadow: 0px 0px 0px 10px#f5ac4295;
     border: none;   
 }
-
-.left img{
-    position: absolute;
-    bottom: 35px;
-    right: 30px;
-    border-radius: 50%;
+.left .account{
+    display: grid;
+    grid-template-columns: 70px 1fr 50px;
+    align-items: center;
     transition: 0.2s;
+    position: absolute;
+    bottom: 30px;
+    right: 15px;
+    padding: 13px;   
 }
-.left img:hover{
-    box-shadow: 0px 0px 1px 10px var(--shadow-color);
+.left .dot{
+    text-align: right;
 }
-
+.left img{
+    border-radius: 50%;    
+}
+.left .account:hover{
+    background-color: var(--shadow-color);
+    border-radius: 40px;
+    
+}
 .right{grid-area: right;
     background-color:var(--card-color);}
 main{
@@ -112,7 +148,7 @@ li{
     font-size: 20px;
     align-items: center;
     font-weight: bold;
-    background-color:var(--card-color)
+    background-color:var(--card-color);
     transition: 0.2s;
     
 }
@@ -131,7 +167,7 @@ li{
 .conhead input{
    border: none;
    background-color: black;
-   font-size: 20px;   
+   font-size: 18px;   
    margin-top: 0px;
    padding: 12px;
    margin-left: 5px;
@@ -167,6 +203,33 @@ li{
     font-weight: bolder;
 }
 .con-two button:active{
-    background-color:#ffad1f;
-   
+    background-color:#ffad1f;   
 }
+.plays{
+    border: 1px solid var(--line-color);
+    margin-top: 20px;
+    background-color: var(--card-color);
+}
+.genre{
+    padding:10px;
+    padding-left: 50px;
+    color: #6e767d;
+    font-size: 0.8rem;
+}
+.genre span{
+    padding-left: 10px; 
+}
+.content-play{
+    
+}
+/* .account-genre{
+    display: grid;
+    grid-template-columns: 70px auto 35px;
+    grid-gap:10px;
+    border:springgreen 2px solid;
+}
+.account-genre img{
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 20px;
+} */
