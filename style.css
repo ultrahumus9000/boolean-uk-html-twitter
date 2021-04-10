@@ -10,6 +10,7 @@ html{
     --card-color:#000000;
     --shadow-color:#ffad1f20;
     --darktextcolor:#6e767d;
+    --special-yellow:#ffad1f;
 }
 
 body{
@@ -29,16 +30,19 @@ body{
     .left a span{
         display: none;
     }
+    .left button{
+        display: none;
+    }
 
-    @media screen and (max-width:700px) {
+    @media screen and (max-width:800px) {
         body{
             grid-template: 
             "main"1fr/
             1fr;
         }
-        .left{
+        .left {
             display: none;
-        }
+        } 
     }
 }
 
@@ -53,6 +57,8 @@ aside{
     grid-template-rows: 70% 30%;
     padding-left: 100px;
     position: relative;
+    height: 100vh;
+    border-right: 1px solid var(--line-color); 
 }
 .left nav{
 display: grid;
@@ -121,7 +127,7 @@ padding-right: 35px;
     position: absolute;
     bottom: 30px;
     right: 15px;
-    padding: 13px;   
+    padding: 13px;  
 }
 .left .dot{
     text-align: right;
@@ -135,7 +141,9 @@ padding-right: 35px;
     
 }
 .right{grid-area: right;
-    background-color:var(--card-color);}
+    background-color:var(--card-color);
+    height: 100vh;
+}
 main{
     grid-area:main; 
     background-color: var(--background-color);
@@ -145,6 +153,7 @@ li{
     
 }
 .content{
+    height: 100vh;
     overflow: scroll;
 }
 .midheader{
@@ -156,11 +165,20 @@ li{
     align-items: center;
     font-weight: bold;
     background-color:var(--card-color);
-    transition: 0.2s;
+    transition: 0.2s;  
 }
+.midheader svg{
+ border-radius: 50%;
+}
+.midheader svg:hover{
+    border-radius: 50%;
+    box-shadow: 0px 0px 0px 5px #ffad1f30;
+    background-color: #ffad1f30;
+
+   }
 .conhead{
     border: 1px solid #2f3336;
-    background-color:var(--card-color);   
+    background-color:var(--card-color);  
 }
 .con-one{
     display: grid;
@@ -211,19 +229,56 @@ li{
     background-color:#ffad1f;   
 }
 .media-one{
-    /* border: 1px solid var(--line-color); */
+    border: 1px solid var(--line-color);
     border-left: none;
     border-right: none;
     margin-top: 12px;
-    background-color: var(--card-color);
-    
-
+    background-color: var(--card-color);   
+    border-bottom: none;
+}
+.media-two{
+    border: 1px solid var(--line-color);
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    background-color: var(--card-color);   
+}
+.media-three{
+    border: 1px solid var(--line-color);
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    background-color: var(--card-color);   
+}
+.media-four{
+    border: 1px solid var(--line-color);
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    background-color: var(--card-color);   
+}
+.media-five{
+    border: 1px solid var(--line-color);
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    background-color: var(--card-color);   
+}
+iframe{
+    margin-top: 10px;
+    border-radius: 20px;
+}
+.medias span{
+    color: var(--special-yellow);
 }
 .genre{
     padding:10px;
     padding-left: 50px;
     color: #6e767d;
     font-size: 0.8rem;
+    display: grid;
+    grid-template-columns: 15px auto;
+    align-content: center;
 }
 .genre span{
     padding-left: 10px; 
@@ -233,17 +288,17 @@ li{
     grid-template-columns: 80px 1fr; 
     padding-bottom: 20px;
     
+    
 }
 .play-media-area{
     display: grid;
     grid-template-rows: auto auto auto; 
     gap:5px;
-    padding-left: 5px;
-    
+    padding-left: 5px;       
 }
 .account-info{
     display: grid;
-    grid-template-columns: 90% 10%;     
+    grid-template-columns: 90% 10%;    
 }
 .account-info .blue-dot{
     padding: 5px;
@@ -286,6 +341,7 @@ footer span{
 }
 footer svg{
     border-radius: 50%;
+    transition: 0.2s;
   }
   footer .blue:hover svg{
     box-shadow: 0px 0px 0px 7px#6cb9d830;
