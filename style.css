@@ -20,26 +20,30 @@ body{
     minmax(100px,350px) auto minmax(100px,450px);
     color: #d9d9d9;       
 }
-@media screen and (max-width:900px){
+@media screen and (max-width:1200px){
     
    body{  
     grid-template: 
     "left main" 1fr/
-    100px 1fr;}
+    200px 1fr;}
+    .left a span{
+        display: none;
+    }
 
-    @media screen and (max-width:500px) {
+    @media screen and (max-width:700px) {
         body{
             grid-template: 
             "main"1fr/
-            auto;
+            1fr;
         }
-       
+        .left{
+            display: none;
+        }
     }
 }
 
 aside{
-    border: 1px solid var(--line-color);
-    
+    border: 1px solid var(--line-color);    
 }
 .left{
     grid-area:left;
@@ -140,6 +144,9 @@ li{
     list-style: none;
     
 }
+.content{
+    overflow: scroll;
+}
 .midheader{
     border-bottom:1px solid #2f3336 ;
     padding: 10px;   
@@ -150,11 +157,10 @@ li{
     font-weight: bold;
     background-color:var(--card-color);
     transition: 0.2s;
-    
 }
 .conhead{
     border: 1px solid #2f3336;
-    background-color:var(--card-color)
+    background-color:var(--card-color);   
 }
 .con-one{
     display: grid;
@@ -174,13 +180,12 @@ li{
 }
 .con-two{
     display: flex;
-    padding-bottom:15px;    
+    padding-bottom:5px;  
 }
 .con-two div{
     flex: 2.5;
     margin-left: 90px;
-    align-self: center;
-    
+    align-self: center;  
 }
 .con-two div svg{
     margin-right: 10px;   
@@ -205,10 +210,14 @@ li{
 .con-two button:active{
     background-color:#ffad1f;   
 }
-.plays{
-    border: 1px solid var(--line-color);
-    margin-top: 20px;
+.media-one{
+    /* border: 1px solid var(--line-color); */
+    border-left: none;
+    border-right: none;
+    margin-top: 12px;
     background-color: var(--card-color);
+    
+
 }
 .genre{
     padding:10px;
@@ -220,16 +229,82 @@ li{
     padding-left: 10px; 
 }
 .content-play{
+    display: grid;
+    grid-template-columns: 80px 1fr; 
+    padding-bottom: 20px;
     
 }
-/* .account-genre{
+.play-media-area{
     display: grid;
-    grid-template-columns: 70px auto 35px;
-    grid-gap:10px;
-    border:springgreen 2px solid;
+    grid-template-rows: auto auto auto; 
+    gap:5px;
+    padding-left: 5px;
+    
 }
-.account-genre img{
+.account-info{
+    display: grid;
+    grid-template-columns: 90% 10%;     
+}
+.account-info .blue-dot{
+    padding: 5px;
+    color: #6e767d;
+    display:flex;
+    justify-self: center;
+    border-radius: 50%;
+    transition: 0.2s;
+}
+.account-info .blue-dot:hover{
+    color:rgba(4, 235, 235, 0.904);
+    background-color: rgb(3, 28, 49);
+    cursor: pointer;
+}
+.play-media-area .medias{
+    margin-top: -7px;}
+    
+.play-media-area .medias img{
+    border-radius: 20px;
+    margin-top: 10px;
+}
+.account-profile{
     border-radius: 50%;
     object-fit: cover;
-    margin-left: 20px;
-} */
+    margin-left: 20px;   
+}
+footer{
+display: grid;
+grid-template-columns: auto auto auto auto;
+padding: 5px;
+}
+footer div{
+    display: grid;
+    grid-template-columns: 22% 78%;  
+    align-items: center;
+}
+footer span{
+    font-size: 15px;
+    color: var(--darktextcolor);
+}
+footer svg{
+    border-radius: 50%;
+  }
+  footer .blue:hover svg{
+    box-shadow: 0px 0px 0px 7px#6cb9d830;
+    background-color: #6cb9d830; 
+  }
+  footer .blue:hover span{
+    color:cyan;
+  }
+  footer .green:hover svg{
+    box-shadow: 0px 0px 0px 7px#89f0d630;
+    background-color:#89f0d630; 
+  }
+  footer .green:hover span{
+    color:rgb(68, 212, 68);
+  }
+  footer .pink:hover svg{
+    box-shadow: 0px 0px 0px 7px#f089b030;
+    background-color:#f089b030; 
+  }
+  footer .pink:hover span{
+    color:rgb(243, 31, 73);
+  }
