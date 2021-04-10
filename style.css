@@ -11,6 +11,8 @@ html{
     --shadow-color:#ffad1f20;
     --darktextcolor:#6e767d;
     --special-yellow:#ffad1f;
+    --lighttextcolor:#60676e;
+    --brighttext-color:#d9d9d9;
 }
 
 body{
@@ -121,11 +123,11 @@ padding-right: 35px;
 }
 .left .account{
     display: grid;
-    grid-template-columns: 70px 1fr 50px;
+    grid-template-columns: 50px 1fr 50px;
     align-items: center;
     transition: 0.2s;
     position: absolute;
-    bottom: 30px;
+    bottom: 10px;
     right: 15px;
     padding: 13px;  
 }
@@ -133,17 +135,13 @@ padding-right: 35px;
     text-align: right;
 }
 .left img{
-    border-radius: 50%;    
+    border-radius: 50%;  
 }
 .left .account:hover{
     background-color: var(--shadow-color);
-    border-radius: 40px;
-    
+    border-radius: 40px;   
 }
-.right{grid-area: right;
-    background-color:var(--card-color);
-    height: 100vh;
-}
+
 main{
     grid-area:main; 
     background-color: var(--background-color);
@@ -236,33 +234,21 @@ li{
     background-color: var(--card-color);   
     border-bottom: none;
 }
-.media-two{
+.media-two, .media-three, .media-four, .media-five,.media-six,.media-seven{
     border: 1px solid var(--line-color);
     border-bottom: none;
     border-left: none;
     border-right: none;
-    background-color: var(--card-color);   
+    background-color: var(--card-color); 
+    transition: 0.2s;  
 }
-.media-three{
-    border: 1px solid var(--line-color);
-    border-bottom: none;
-    border-left: none;
-    border-right: none;
-    background-color: var(--card-color);   
+.media-one:hover,.media-two:hover, .media-three:hover, .media-four:hover, .media-five:hover,.media-six:hover,.media-seven:hover{
+    background-color: #00000080;   
 }
-.media-four{
-    border: 1px solid var(--line-color);
-    border-bottom: none;
-    border-left: none;
-    border-right: none;
-    background-color: var(--card-color);   
-}
-.media-five{
-    border: 1px solid var(--line-color);
-    border-bottom: none;
-    border-left: none;
-    border-right: none;
-    background-color: var(--card-color);   
+
+.media-seven a{
+    text-decoration: none;
+    color: var(--special-yellow);
 }
 iframe{
     margin-top: 10px;
@@ -364,3 +350,85 @@ footer svg{
   footer .pink:hover span{
     color:rgb(243, 31, 73);
   }
+/* edit right part */
+.right{grid-area: right;
+    background-color:var(--card-color);
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 50px auto;
+    padding-left: 30px;  
+}
+.right .searchbar{
+    position: relative;
+}
+.right input{
+    position: relative;
+    top: 3px;
+    background: url("image/search.svg");
+    background-size: 20px 20px;
+    background-position: 15px 10px;
+    background-repeat: no-repeat;
+    background-color: var(--background-color);
+    padding-left:50px;
+    padding-top: 12px;
+    padding-bottom:12px;
+    margin-top: 3px;
+    width: 300px;
+    font-size: 16px;
+    border:none;
+    border-radius: 30px; 
+    transition: 0.2s;
+  }
+.searchbar input:hover{
+    border: 2px solid var(--special-yellow); 
+    background: url("image/search copy.svg");
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position: 15px 10px;
+}
+.other-content{
+    display: grid;
+    grid-template-rows: auto;
+    border:2px solid pink ;
+    margin-top: 10px;
+    margin-right: 100px;    
+}
+.happening{
+    border-radius: 20px;
+    border: 2px solid red;
+    background-color: var(--background-color);
+}
+.happening h1{
+    padding: 15px;
+}
+.happening h3{
+    padding: 15px;
+    color: var(--special-yellow);
+    font-weight: lighter;
+    font-size: 14px;
+}
+.happening .light span{
+    color: var(--special-yellow);
+}
+.happening .one{
+    display: grid;
+    border:2px solid var(--line-color);
+    padding: 10px;
+    grid-template-columns: 74% 26%;
+    color: var(--brighttext-color)};
+}
+.happening .one img{
+    object-fit: cover;
+    border-radius: 20px; 
+    border: red 2px solid;
+}
+.happening .one .text{
+    align-self: center;
+    display: grid;
+    grid-gap:6px
+}
+.happening .one .text .light{
+    font-size: 13px;
+    color:var(--lighttextcolor);
+}
+
