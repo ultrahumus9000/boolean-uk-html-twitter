@@ -417,18 +417,13 @@ footer svg{
     grid-template-columns: 74% 26%;
     color: var(--brighttext-color)};
 }
-.happening .one img{
-    object-fit: cover;
-    border-radius: 20px; 
-    border: red 2px solid;
-}
-.happening .one .text{
-    align-self: center;
-    display: grid;
-    grid-gap:6px
-}
-.happening .one .text .light{
-    font-size: 13px;
-    color:var(--lighttextcolor);
-}
 
+.happening .one .text .light{
+    font-size: 10px;
+    color:var(--lighttextcolor);
+    border: springgreen 2px solid;
+}
+.stupid{
+    border-radius: 20px;
+    object-fit: cover;
+}
