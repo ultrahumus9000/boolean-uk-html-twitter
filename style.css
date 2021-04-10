@@ -2,30 +2,122 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    font-family: sans-serif;  
+}
+html{
+    --background-color:#16181d;
+    --line-color:#2f3336;
+    --card-color:#000000;
 }
 body{
     height: 100vh;
     display: grid;
-    grid-template-columns: 400px 1fr 450px;
-    background-color:black;
-    color: #d9d9d9;
+    grid-template: 
+    "left main right" 1fr/
+    minmax(100px,400px) auto minmax(100px,450px);
+    color: #d9d9d9;       
+}
+@media screen and (max-width:900px){
+    
+   body {  
+    grid-template: 
+    "left main" 1fr/
+    100px 1fr;}
+
+    @media screen and (max-width:500px) {
+        body{
+            grid-template: 
+            "main"1fr/
+            auto;
+        }
+       
+    }
+}
+.uh{
+    border: 1px solid var(--line-color);
+    margin-top: 20px;
+    background-color: var(--card-color);
 }
 aside{
-    border: 1px solid #16181d;
+    border: 1px solid var(--line-color);
+}
+.left{grid-area:left;
+    background-color:var(--card-color);
+
+}
+.right{grid-area: right;
+    background-color:var(--card-color);}
+main{
+    grid-area:main; 
+    background-color: var(--background-color);
 }
 li{
     list-style: none;
     
 }
 .midheader{
-    border-bottom:1px solid #16181d ;
+    border-bottom:1px solid #2f3336 ;
     padding: 10px;   
     display: grid; 
     grid-template-columns: 90% 10%;
     font-size: 20px;
     align-items: center;
     font-weight: bold;
-    font-family: sans-serif;
+    background-color:var(--card-color)
     
-    
+}
+.conhead{
+    border: 1px solid #2f3336;
+    background-color:var(--card-color)
+}
+.con-one{
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    /* border: 2px silver solid; */
+
+}
+.conhead img{
+    border-radius: 50%;
+    margin: 10px;   
+}
+.conhead input{
+   border: none;
+   background-color: black;
+   font-size: 20px;   
+   margin-top: 0px;
+   padding: 12px;
+   margin-left: 5px;
+  
+
+}
+.con-two{
+    display: flex;
+    padding-bottom:15px ;
+}
+.con-two div{
+    flex: 2.5;
+    margin-left: 90px;
+    align-self: center;
+}
+.con-two div svg{
+    margin-right: 10px;    
+}
+.con-two div svg:hover{
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0px 0px 0px 8px #ffad1f20;
+    background-color:#ffad1f20;  
+}
+.con-two button{
+    border: none;
+    border-radius: 20px;
+    padding: 10px 18px ;
+    font-size: 16px;
+    background-color:#f5d9a8;
+    color:whitesmoke; 
+    margin-right: 20px;  
+}
+.con-two button:active{
+    background-color:#ffad1f;
+   
 }
