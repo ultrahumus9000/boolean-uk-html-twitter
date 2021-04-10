@@ -8,6 +8,7 @@ html{
     --background-color:#16181d;
     --line-color:#2f3336;
     --card-color:#000000;
+    --shadow-color:#ffad1f20;
 }
 body{
     height: 100vh;
@@ -43,8 +44,56 @@ aside{
 }
 .left{grid-area:left;
     background-color:var(--card-color);
-
+    display: grid;
+    padding-top: 25px;
+    position: relative;
+    grid-template-rows: 70% 30%;
 }
+.left nav{
+display: grid;
+grid-template-rows: auto;
+justify-content: right;
+padding-right: 35px;
+}
+.left nav svg{
+transition: 0.2s;
+}
+
+.left nav .bird:hover{
+    border-radius: 50%;
+    box-shadow: 0px 0px 1px 10px #a9a9a920;
+}
+.left nav svg:hover{
+    border-radius: 50%;
+    box-shadow: 0px 0px 1px 10px var(--shadow-color) ;
+    background-color:var(--shadow-color);
+}
+.left nav .feather{
+    border-radius: 50%;
+    box-shadow: 0px 0px 0px 10px#f5ac42;
+    background-color:#f5ac42; 
+    transition: 0.2s;
+    box-sizing: border-box;
+}
+/* note:not change shape */
+.left nav .feather:hover{
+    border-radius: 50%;
+    background-color:#f5ac4295;
+    box-shadow: 0px 0px 0px 10px#f5ac4295;
+    border: none;   
+}
+
+.left img{
+    position: absolute;
+    bottom: 35px;
+    right: 30px;
+    border-radius: 50%;
+    transition: 0.2s;
+}
+.left img:hover{
+    box-shadow: 0px 0px 1px 10px var(--shadow-color);
+}
+
 .right{grid-area: right;
     background-color:var(--card-color);}
 main{
@@ -64,6 +113,7 @@ li{
     align-items: center;
     font-weight: bold;
     background-color:var(--card-color)
+    transition: 0.2s;
     
 }
 .conhead{
@@ -73,8 +123,6 @@ li{
 .con-one{
     display: grid;
     grid-template-columns: 70px 1fr;
-    /* border: 2px silver solid; */
-
 }
 .conhead img{
     border-radius: 50%;
@@ -87,35 +135,36 @@ li{
    margin-top: 0px;
    padding: 12px;
    margin-left: 5px;
-  
-
 }
 .con-two{
     display: flex;
-    padding-bottom:15px ;
+    padding-bottom:15px;    
 }
 .con-two div{
     flex: 2.5;
     margin-left: 90px;
     align-self: center;
+    
 }
 .con-two div svg{
-    margin-right: 10px;    
+    margin-right: 10px;   
+    transition: 0.2s; 
 }
 .con-two div svg:hover{
     cursor: pointer;
     border-radius: 50%;
-    box-shadow: 0px 0px 0px 8px #ffad1f20;
-    background-color:#ffad1f20;  
+    box-shadow: 0px 0px 0px 8px var(--shadow-color);
+    background-color:var(--shadow-color);  
 }
 .con-two button{
     border: none;
     border-radius: 20px;
-    padding: 10px 18px ;
+    padding: 12px 18px ;
     font-size: 16px;
-    background-color:#f5d9a8;
-    color:whitesmoke; 
+    background-color:#7f571d;
+    color:#7f7f7f; 
     margin-right: 20px;  
+    font-weight: bolder;
 }
 .con-two button:active{
     background-color:#ffad1f;
