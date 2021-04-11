@@ -13,6 +13,7 @@ html{
     --special-yellow:#ffad1f;
     --lighttextcolor:#60676e;
     --brighttext-color:#d9d9d9;
+    --backgroundhovercolor:#62729b10; 
 }
 
 body{
@@ -244,6 +245,7 @@ li{
     border-right: none;
     background-color: var(--card-color); 
     transition: 0.2s;  
+    padding-right: 15px;
 }
 .media-one:hover,.media-two:hover, .media-three:hover, .media-four:hover, .media-five:hover,.media-six:hover,.media-seven:hover{
     background-color: #00000080;   
@@ -484,6 +486,9 @@ span.red{
     font-weight:lighter;
     font-size: 14px;
 }
+.whofollow h3:hover{
+    background-color:#62729b10;  
+}
 .follow-one{
     border-bottom: 2px solid var(--line-color);
     display: grid;
@@ -503,8 +508,18 @@ span.red{
 .follow-one .newname{
     line-height: 20px;
 }
+.newname a{
+    color: inherit;
+    text-decoration: none;
+}
+.newname a:hover{
+    text-decoration: underline
+}
+
 .dark{
     color: var(--darktextcolor);
+    font-size: 0.8rem;
+    padding-top: 5px;
 }
 .follow-one button{
     margin: 3px 20px 3px 0px;
@@ -523,9 +538,13 @@ span.red{
 .topic-one{
     border-bottom: 2px solid var(--line-color);
     display: grid;
-    grid-template-columns: 2fr 100px 50px;
+    grid-template-columns: 2fr 100px 40px;
     padding-top: 13px;
     padding-bottom: 13px;
+    padding-left: 20px;
+}
+.topic-one:hover, .topics-to-follow h3:hover{
+    background-color:#62729b10; 
 }
 .topics-to-follow h1{
     border-bottom: 2px solid var(--line-color);
@@ -548,6 +567,20 @@ span.red{
     border:2px solid var(--special-yellow);
     padding: -20px;
 }
+.topic-one button:hover{
+    background-color: var(--shadow-color);
+}
+.topic-one svg{
+    display: grid;
+    align-self: center;
+    border-radius: 50%;
+    transition: 0.2s;
+    padding: 6px;
+}
+.topic-one svg:hover{
+    background-color: var(--shadow-color);
+}
+
 .last{
     color: var(--darktextcolor);
     font-size: 0.85rem;
