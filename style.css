@@ -24,33 +24,7 @@ body{
     minmax(100px,350px) auto minmax(100px,600px);
     color: #d9d9d9;       
 }
-@media screen and (max-width:1200px){
-    
-   body{  
-    grid-template: 
-    "left main" 1fr/
-    200px 1fr;}
-    .right{
-        display: none;
-    }
-    .left a span{
-        display: none;
-    }
-    .left button{
-        display: none;
-    }
-   
-    @media screen and (max-width:800px) {
-        body{
-            grid-template: 
-            "main"1fr/
-            1fr;
-        }
-        .left {
-            display: none;
-        } 
-    }
-}
+
 aside{
     border: 1px solid var(--line-color);    
 }
@@ -81,7 +55,7 @@ padding-right: 35px;
 .left a button{
     padding: 10px 30px 10px 14px;
     display: grid;
-    grid-template-columns: 40px 1fr;
+    grid-template-columns: 43px 1fr;
     align-content: center;
     border-radius:30px ;
     color:var(--brighttext-color);
@@ -611,3 +585,30 @@ span.red{
     font-size: 0.85rem;
     padding:10px 0px 100px 20px;
 }
+@media screen and (max-width:1200px){
+    
+    body{  
+     grid-template: 
+     "left main" 1fr/
+     200px 1fr;}
+     .right{
+         display: none;
+     }
+     .left a span{
+         display: none;
+     }
+     .left button{
+         display: none;
+     }
+    
+     @media screen and (max-width:800px) {
+         body{
+             grid-template: 
+             "main"1fr/
+             1fr;
+         }
+         .left {
+             display: none;
+         } 
+     }
+ }
