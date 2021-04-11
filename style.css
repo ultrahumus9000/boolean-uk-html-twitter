@@ -277,7 +277,7 @@ iframe{
 .content-play{
     display: grid;
     grid-template-columns: 80px 1fr; 
-    padding-bottom: 20px;    
+    padding-bottom: 10px;    
 }
 .play-media-area{
     display: grid;
@@ -317,7 +317,7 @@ iframe{
 footer{
 display: grid;
 grid-template-columns: auto auto auto auto;
-padding: 5px;
+padding-top: 5px;
 }
 footer div{
     display: grid;
