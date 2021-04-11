@@ -258,6 +258,9 @@ iframe{
     margin-top: 10px;
     border-radius: 20px;
 }
+.medias p{
+    padding-bottom: 10px;
+}
 .medias span{
     color: var(--special-yellow);
 }
