@@ -49,15 +49,25 @@ padding-right: 35px;
 .left nav a{
     text-decoration: none; 
 }
+.left a svg {
+    fill: #d9d9d9;
+    width: 28px;
+   }
+.left a button:hover svg{
+    fill:#ffad1f;
+}
+.left .homebutton svg{
+    fill:#ffad1f;
+}
 .left nav .home{
    color:#ffad1f;  
 }
 .left a button{
-    padding: 10px 30px 10px 14px;
     display: grid;
     grid-template-columns: 43px 1fr;
-    align-content: center;
-    border-radius:30px ;
+    align-items: center;
+    border-radius:30px;
+    padding: 10px 30px 10px 14px;
     color:var(--brighttext-color);
     font-weight: bolder;
     background-color: var(--card-color);
@@ -65,9 +75,6 @@ padding-right: 35px;
     font-size: 20px;
     transition: 0.2s;
     margin-bottom: 5px;
-}
- .left button span{
-    padding-top: 4px;
 }
 .homebutton{
     margin-top: 40px;
@@ -96,19 +103,22 @@ padding-right: 35px;
     box-shadow: 0px 0px 1px 10px #a9a9a920;
 }
 
-.left nav .feather{
+.left .feather{
     border-radius: 50%;
     box-shadow: 0px 0px 0px 10px#f5ac42;
     background-color:#f5ac42; 
     transition: 0.2s;
     box-sizing: border-box;
+    margin-left: 10px;
+    margin-top: 30px;
+    display: none;
 }
 /* note:not change shape */
 .left nav .feather:hover{
     border-radius: 50%;
     background-color:#f5ac4295;
     box-shadow: 0px 0px 0px 10px#f5ac4295;
-    border: none;   
+    /* border: none;    */
 }
 .left .account{
     display: grid;
@@ -197,7 +207,7 @@ li{
     margin-right: 10px;   
     transition: 0.2s; 
     border-radius: 50%; 
-    padding: 6px;
+    padding: 9px;
 }
 .con-two div svg:hover{
     cursor: pointer;
@@ -236,6 +246,7 @@ li{
     margin-top: 12px;
     background-color: var(--card-color);   
     border-bottom: none;
+    padding-right: 15px;
 }
 .media-two, .media-three, .media-four, .media-five,.media-six,.media-seven{
     border: 1px solid var(--line-color);
@@ -289,15 +300,18 @@ iframe{
 }
 .account-info{
     display: grid;
-    grid-template-columns: 90% 10%;    
+    grid-template-columns: 1fr auto;  
+    
 }
 .blue-dot{
     padding: 5px;
     color: #6e767d;
-    display:flex;
-    justify-self: center;
+    display:grid;
+    place-content: center;
     border-radius: 50%;
     transition: 0.2s;
+    height: 30px;
+    width: 30px;
 }
  .blue-dot:hover{
     color:rgba(4, 235, 235, 0.904);
@@ -323,7 +337,7 @@ padding-top: 5px;
 }
 footer div{
     display: grid;
-    grid-template-columns: 22% 78%;  
+    grid-template-columns: 35% 65%;  
     align-items: center;
 }
 footer span{
@@ -333,24 +347,28 @@ footer span{
 footer svg{
     border-radius: 50%;
     transition: 0.2s;
+    width: 43px;
+    fill: #6e767d;
+    padding: 9px;
   }
   footer .blue:hover svg{
-    box-shadow: 0px 0px 0px 7px#6cb9d830;
     background-color: #6cb9d830; 
+    fill:cyan;
   }
   footer .blue:hover span{
     color:cyan;
   }
   footer .green:hover svg{
-    box-shadow: 0px 0px 0px 7px#89f0d630;
     background-color:#89f0d630; 
+    fill:rgb(68, 212, 68);
   }
   footer .green:hover span{
     color:rgb(68, 212, 68);
   }
   footer .pink:hover svg{
-    box-shadow: 0px 0px 0px 7px#f089b030;
     background-color:#f089b030; 
+    fill:rgb(243, 31, 73);;
+
   }
   footer .pink:hover span{
     color:rgb(243, 31, 73);
@@ -588,7 +606,7 @@ span.red{
     font-size: 0.85rem;
     padding:10px 0px 100px 20px;
 }
-@media screen and (max-width:1200px){
+@media screen and (max-width:1240px){
     
     body{  
      grid-template: 
@@ -597,13 +615,30 @@ span.red{
      .right{
          display: none;
      }
+     .left .feather{
+        display: block;
+        transform: translate(10px, 10px);
+    }
+    .explorebutton svg{
+        display: none;
+    }
      .left a span{
          display: none;
      }
+      .left a button:not(.homebutton){
+         transform: translateY(-50px);
+     }
+    
      .left button{
          display: none;
      }
     
+    .account img{
+        transform: translate(40px, -100px);
+    }
+    .account span{
+        display: none;
+    }
      @media screen and (max-width:800px) {
          body{
              grid-template: 
