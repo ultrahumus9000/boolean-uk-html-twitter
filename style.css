@@ -196,11 +196,11 @@ li{
 .con-two div svg{
     margin-right: 10px;   
     transition: 0.2s; 
+    border-radius: 50%; 
+    padding: 6px;
 }
 .con-two div svg:hover{
     cursor: pointer;
-    border-radius: 50%;
-    box-shadow: 0px 0px 0px 8px var(--shadow-color);
     background-color:var(--shadow-color);  
 }
 .con-two button{
